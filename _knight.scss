@@ -1,0 +1,161 @@
+//knight 
+
+
+
+body::before{
+    position: fixed;
+   
+    position: absolute;
+    background: url('https://s3-eu-west-1.amazonaws.com/wdildnproject2/knight-sprite.png');
+    z-index: -1;
+    margin-top: .5em;
+    top: 0;
+    left: 125%;
+    animation: knightHeightWidth 4s steps(1) forwards 2s, knightFrame 4s steps(1) forwards 2s, leftKnight 10s linear 2s forwards, knightGone 0.01s linear forwards 6.40s, enterDoor 4s steps(1) forwards 2s;
+    animation-iteration-count: infinite;
+}
+
+$knightHeigth : 180px;
+
+@keyframes knightHeightWidth {
+  0%{height: $knightHeigth; width: 210px}
+  5%{height: $knightHeigth; width: 193px}
+  10%{height: $knightHeigth; width: 201px}
+  15%{height: $knightHeigth; width: 192px}
+  20%{height: $knightHeigth; width: 210px}
+  25%{height: $knightHeigth; width: 193px}
+  30%{height: $knightHeigth; width: 201px}
+  35%{height: $knightHeigth; width: 192px}
+  40%{height: $knightHeigth; width: 178px}
+  45%{height: $knightHeigth; width: 160px}
+  50%{height: $knightHeigth; width: 178px}
+  55%{height: $knightHeigth; width: 188px}
+  60%{height: $knightHeigth; width: 173px}
+  65%{height: $knightHeigth; width: 177px}
+  70%{height: $knightHeigth; width: 167px}
+  75%{height: $knightHeigth; width: 188px}
+  80%{height: $knightHeigth; width: 173px}
+  85%{height: $knightHeigth; width: 177px}
+  90%{height: $knightHeigth; width: 167px}
+  95%{height: $knightHeigth; width: 81px}
+  100%{height: $knightHeigth; width: 42px}
+}
+
+
+
+@keyframes knightFrame {
+  0%{background-position:0px 0px;}
+  5%{background-position:-210px 0px;}
+  10%{background-position:-403px 0px;}
+  15%{background-position:-604px 0px;}
+  20%{background-position:0px 0px;}
+  25%{background-position:-210px 0px;}
+  30%{background-position:-403px 0px;}
+  35%{background-position:-604px 0px;}
+  40%{background-position:0px -204px;}
+  45%{background-position:-796px 0px;}
+  50%{background-position:0px -204px;}
+  55%{background-position:-178px -204px;}
+  60%{background-position:-366px -204px;}
+  65%{background-position:-539px -204px;}
+  70%{background-position:-716px -204px;}
+  75%{background-position:-178px -204px;}
+  80%{background-position:-366px -204px;}
+  85%{background-position:-539px -204px;}
+  90%{background-position:-716px -204px;}
+  95%{background-position:-883px -204px;}
+  100%{background-position:-964px -204px;}
+}
+
+@keyframes leftKnight{
+  90%{left: -25%;}
+  100%{left:-25%;}
+}
+
+@keyframes knightGone{
+  //100%{opacity: 0;}
+
+  
+}
+
+
+
+//dragon stuff
+
+body::after{
+
+// //text Title
+//content: 'Zen Garden';
+text-shadow: 8px 8px 10px #000 ;
+color: $color-1;
+font-family: "Augusta",script;
+font-size: 6em;
+
+
+  position: absolute;
+  background: url('https://s3-eu-west-1.amazonaws.com/wdildnproject2/dragon-sprite.png');
+
+  z-index: 5;
+  height: 300px;
+  width: 230px;
+  left: -500px;
+  animation: dragonFrame 4s steps(1) forwards 2s, dragonHeight 4s steps(1) forwards 2s, dragonMargin 4s steps(1) forwards 2s, downDragon 4s linear 2s forwards, rightDragon 4s linear 2s forwards;
+
+  
+
+
+  
+  
+  
+}
+
+@keyframes downDragon{
+  0%{top:-100px;}
+  50%{top: 100px;}
+  100%{top:-180px;}
+}
+
+@keyframes rightDragon{
+  0%{left:-150px;}
+  50%{left: 400px;}
+  100%{left:1010px;}
+}
+@keyframes dragonFrame {
+  0%{background-position:0px 0px;}
+  11.11%{background-position:0px -224px;}
+  22.22%{background-position:0px -395px;}
+  33.33%{background-position:0px -533px;}
+  44.44%{background-position:0px -681px;}
+  55.55%{background-position:0px -850px;}
+  66.66%{background-position:0px -1029px;}
+  77.77%{background-position:0px -1166px;}
+  88.88%{background-position:0px -1317px;}
+  100%{background-position:0px -1495px;}
+}
+
+@keyframes dragonHeight {
+  0%{height: 224px;}
+  11.11%{height: 171px;}
+  22.22%{height: 138px;}
+  33.33%{height: 148px;}
+  44.44%{height: 169px;}
+  55.55%{height: 179px;}
+  66.66%{height: 137px;}
+  77.77%{height: 151px;}
+  88.88%{height: 178px;}
+  100%{height: 500px;}
+}
+
+
+@keyframes dragonMargin{
+  0%{margin-top: 0px; margin-left:0px;}
+  11.11%{margin-top: 20px; margin-left:0px;}
+  22.22%{margin-top: 60px; margin-left:0px;}
+  33.33%{margin-top:30px ; margin-left:0px;}
+  44.44%{margin-top: 0px; margin-left:20px;}
+  55.55%{margin-top: 0px; margin-left:0px;}
+  66.66%{margin-top: 20px; margin-left:0px;}
+  77.77%{margin-top: 40px; margin-left:0px;}
+  88.88%{margin-top: 0px; margin-left:0px;}
+  100%{margin-top: 20px; margin-left:-10px;}
+}

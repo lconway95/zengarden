@@ -1,0 +1,45 @@
+$x-small : 408px;
+$small: 650px;
+$medium: 999px;
+$large: 1200px;
+$x-large: 2000px;
+
+
+
+@mixin size($width){
+    @if $width == 'x-small'{
+        @media only screen and (max-width: $x-small){
+            @content;
+        }
+    }
+    
+    @if $width == 'small'{
+        @media only screen and (max-width: $small){
+            @content;
+        }
+    }
+     @if $width == 'medium'{
+        @media only screen and (max-width: $medium){
+            @content;
+        }
+    }
+
+    @if $width == 'large'{
+        @media only screen and (max-width: $large){
+            @content;
+        }
+    }
+    
+    @if $width == 'x-large'{
+        @media only screen and (max-width: $x-large){
+            @content;
+        }
+    }
+
+}
+
+@mixin autoCenter(){
+    margin-left: auto;
+    margin-right: auto;
+    
+}
